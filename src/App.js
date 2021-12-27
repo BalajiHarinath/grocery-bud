@@ -3,9 +3,17 @@ import { useState, useEffect } from "react";
 import Alert from "./alert";
 import Contents from "./contents";
 
+const getLocalStorage = () => {
+  let list = localStorage.getItem("list");
+  if (list) {
+    return JSON.parse(list);
+  } else {
+    return [];
+  }
+};
 export default function App() {
   const [name, setName] = useState("");
-  const [list, setList] = useState([]);
+  const [list, setList] = useState(getLocalStorage);
   const [isediting, setIsediting] = useState(false);
   const [editID, setEditID] = useState(null);
   const [alert, setAlert] = useState({ show: false, type: "", msg: "" });
@@ -42,6 +50,9 @@ export default function App() {
   const showAlert = (show = false, type = "", msg = "") => {
     setAlert({ show, type, msg });
   };
+  useEffect(() => {
+    localStorage.setItem("list", JSON.stringify(list));
+  }, [list]);
   return (
     <section className="App">
       <form className="form-container" onSubmit={submitHandler}>
