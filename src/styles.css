@@ -1,0 +1,72 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: white;
+  max-width: 25rem;
+  margin: auto;
+  padding: 1rem 0rem;
+}
+body {
+  background-color: rgb(228, 246, 250);
+}
+.div-container {
+  display: flex;
+  flex-direction: column;
+}
+.article-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0rem;
+  min-width: 230px;
+  max-height: 3rem;
+}
+.title-container {
+  flex: 1;
+}
+.article-title {
+  text-align: left;
+}
+.button-container {
+  margin: auto;
+}
+.edit-btn {
+  border: none;
+  color: rgb(0, 185, 15);
+  cursor: pointer;
+  background-color: white;
+}
+.trash-btn {
+  border: none;
+  color: red;
+  cursor: pointer;
+  background-color: white;
+}
+.clear-btn {
+  border: none;
+  background-color: white;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+}
+.submit-btn {
+  border: none;
+  color: white;
+  min-width: 4rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  background-color: rgb(13, 176, 252);
+  cursor: pointer;
+}
+input {
+  padding-left: 0.5rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  background-color: rgb(228, 246, 250);
+  border: none;
+  outline: none;
+}
+.alert-div {
+  min-height: 2rem;
+}
